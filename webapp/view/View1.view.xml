@@ -1,0 +1,29 @@
+<mvc:View controllerName="fragment1.fragmentproject.controller.View1" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Dialog id="idDialog">
+                <List id="List1" headerText=" Employee ID" items="{emp11>/}">
+                    <items>
+                        <StandardListItem type="Active" title="{emp11>empid}" description="{emp11>empname}" press="onClick" selected="{selected}" />
+                    </items>
+                </List>
+
+                 <HBox justifyContent="End" alignItems="Start">
+                    <Button type="Transparent" text="ok" press="okpress" />
+                    <Button type="Transparent" text="cancel" press="cancelpress" />
+                </HBox>
+            </Dialog>
+
+            <VBox alignContent="Center" alignItems="Center">
+                <f:SimpleForm alignContent="Center" alignItems="Center">
+                    <f:content>
+                        <l:VerticalLayout width="100%">
+                            <Label text="Employee Id" labelFor="empId" />
+                            <Input id="emplyId" showSuggestion="true" showValueHelp="true" textFormatMode="KeyValue" valueHelpRequest="onLoadDialog" />
+                        </l:VerticalLayout>
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
